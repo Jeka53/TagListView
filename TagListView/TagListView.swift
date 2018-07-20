@@ -321,7 +321,7 @@ open class TagListView: UIView {
 //             for tag in self.tagViews {
 //                 tag.isSelected = (tag == this)
 //             }
-            delegate?.tagRemoveButtonPressed?(title, tagView: tagView, sender: self)
+            self.delegate?.tagPressed?(title, tagView: this, sender: self)
          }
         
                                
