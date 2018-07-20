@@ -318,11 +318,13 @@ open class TagListView: UIView {
         
         // On long press, deselect all tags except this one
         tagView.onLongPress = { [unowned self] this in
-            for tag in self.tagViews {
-                tag.isSelected = (tag == this)
-            }
-        }
+//             for tag in self.tagViews {
+//                 tag.isSelected = (tag == this)
+//             }
+            delegate?.tagRemoveButtonPressed?(title, tagView: tagView, sender: self)
+         }
         
+                               
         return tagView
     }
 
